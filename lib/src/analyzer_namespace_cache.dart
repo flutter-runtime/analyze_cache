@@ -12,7 +12,7 @@ class AnalyzerNameSpaceCache<T> extends AnalyzerCache<T> {
   }
 
   @override
-  void fromMap(Map map) {
+  void fromMap(Map<String, dynamic> map) {
     super.fromMap(map);
     exportNames = JSON(element)['exportNames']
         .listValue

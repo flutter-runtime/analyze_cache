@@ -22,7 +22,7 @@ class AnalyzerClassCache<T> extends AnalyzerCache<T> {
   }
 
   @override
-  void fromMap(Map map) {
+  void fromMap(Map<String, dynamic> map) {
     super.fromMap(map);
     constructors = JSON(map)['constructors']
         .listValue

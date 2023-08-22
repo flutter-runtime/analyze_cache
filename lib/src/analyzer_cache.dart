@@ -2,7 +2,7 @@ import 'package:darty_json_safe/darty_json_safe.dart';
 
 abstract class AnalyzerCache<T> {
   final T element;
-  final Map map;
+  final Map<String, dynamic> map;
   final AnalyzerCache? parent;
   bool isEnable = true;
 
@@ -23,7 +23,7 @@ abstract class AnalyzerCache<T> {
     Unwrap(element).map((e) => map[name] = e);
   }
 
-  void fromMap(Map map) {
+  void fromMap(Map<String, dynamic> map) {
     isEnable = JSON(map)['isEnable'].bool ?? true;
   }
 }

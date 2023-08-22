@@ -37,7 +37,7 @@ class AnalyzerImportCache<T> extends AnalyzerCache<T> {
   }
 
   @override
-  void fromMap(Map map) {
+  void fromMap(Map<String, dynamic> map) {
     super.fromMap(map);
     uriContent = JSON(element)['uriContent'].string;
     asName = JSON(element)['asName'].string;
@@ -50,7 +50,7 @@ class AnalyzerImportCache<T> extends AnalyzerCache<T> {
         .map((e) => JSON(e).stringValue)
         .toList();
     namespace = Unwrap(JSON(element)['namespace'].rawValue)
-        .map((e) => AnalyzerNameSpaceCache(e as Map, e, this))
+        .map((e) => AnalyzerNameSpaceCache(e as Map<String, dynamic>, e, this))
         .value;
     index = JSON(element)['index'].intValue;
   }

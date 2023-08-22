@@ -19,7 +19,7 @@ class AnalyzerMethodCache<T> extends AnalyzerCache<T> {
   }
 
   @override
-  void fromMap(Map map) {
+  void fromMap(Map<String, dynamic> map) {
     super.fromMap(map);
     parameters = JSON(element)['parameters']
         .listValue

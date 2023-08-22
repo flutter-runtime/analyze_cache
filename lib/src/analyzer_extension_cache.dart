@@ -24,7 +24,7 @@ class AnalyzerExtensionCache<T> extends AnalyzerCache<T> {
   }
 
   @override
-  void fromMap(Map map) {
+  void fromMap(Map<String, dynamic> map) {
     super.fromMap(map);
     fields = JSON(element)['fields']
         .listValue
